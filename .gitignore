@@ -1,0 +1,16 @@
+# 忽略全部文件
+*
+# 反向忽略以下几个文件
+!/.ssh
+!/.ssh/config
+!/.cargo
+!/.cargo/config
+
+!/.fzf.bash
+!/.fzf.zsh
+!/.gitconfig
+!/.gitignore
+!/.npmrc
+!/.p10k.zsh
+!/.zsh_history
+!/.zshrc
