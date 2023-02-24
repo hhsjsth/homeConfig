@@ -279,14 +279,14 @@ setsshproxy() {
 
 ########
 #### fzf
-export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git .local/state/nvim/ -I'
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border --inline-info -m --preview "bat --style=numbers --color=always --line-range :500 {}"'
 # export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border --inline-info -m'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 # export FZF_ALT_C_COMMAND="fd --t d --hidden --follow --exclude .git"
-export FZF_ALT_C_COMMAND="fd --type d --hidden --follow"
+export FZF_ALT_C_COMMAND="fd --type d --hidden --follow -I"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
 ## 下面是通过 $(brew --prefix)/opt/fzf/install 产生的
@@ -297,12 +297,12 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 # - The first argument to the function ($1) is the base path to start traversal
 # - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
+  fd --hidden --follow --exclude ".git" . "$1" -I
 }
 
 # Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
+  fd --type d --hidden --follow --exclude ".git" . "$1" -I
 }
 
 # (EXPERIMENTAL) Advanced customization of fzf options via _fzf_comprun function
