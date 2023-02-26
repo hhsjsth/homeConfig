@@ -167,13 +167,15 @@ alias bz2='tar -xjvf'
 alias gcid="git log | head -1 | awk '{print substr(\$2,1,7)}' | pbcopy"
 # alias pip="python -m pip"
 alias ra="ranger"
-# alias so="source ~/.zshrc"
 alias so="exec zsh"
 alias rg="rg --hidden --glob '!.git'"
 alias brewupdate="brew update && brew upgrade"
 # alias code-insiders="/mnt/d/scoop/apps/vscode-insiders/current/bin/code-insiders"
-# alias neo="/bin/neofetch"
-# alias neolol="/bin/neofetch | lolcat"
+alias neo="/bin/neofetch"
+alias neolol="/bin/neofetch | lolcat"
+alias pacman="sudo pacman"
+alias systemctl="sudo systemctl"
+alias zshhist="nvim ~/.zsh_history"
 
 function mkcd {
   command mkdir $1 && cd $1
