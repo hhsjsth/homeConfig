@@ -423,8 +423,7 @@ setup_samba() {
 EOF
   sudo cp -f $TMP_SMB_CONF $SMB_CONF
   sudo smbpasswd -a gtr # 创建一个 smb 账户
-  sudo systemctl restart smb.service
-  sudo systemctl enable smb.service
+  sudo systemctl enable --now smb.service
 }
 
 source /home/gtr/.config/broot/launcher/bash/br
