@@ -176,6 +176,7 @@ alias neolol="/bin/neofetch | lolcat"
 alias pacman="sudo pacman"
 alias systemctl="sudo systemctl"
 alias zshhist="nvim ~/.zsh_history"
+alias fdisk="sudo fdisk"
 
 function mkcd {
   command mkdir $1 && cd $1
