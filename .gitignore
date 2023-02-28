@@ -16,3 +16,6 @@
 !/.zshrc
 
 !/autoPush.sh
+
+!/pip
+!/pip/pip.conf
