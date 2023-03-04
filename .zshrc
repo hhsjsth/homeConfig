@@ -282,7 +282,7 @@ setsshproxy() {
 
 ########
 #### fzf
-export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git .local/state/nvim/ -I'
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git --exclude .local/state/nvim/ -I'
 export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border --inline-info -m --preview "bat --style=numbers --color=always --line-range :500 {}"'
 # export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border --inline-info -m'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
