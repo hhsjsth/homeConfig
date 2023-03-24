@@ -374,7 +374,6 @@ relink () {
 
 function ml() { mkdir -p "$(dirname "$1")" && rsync -aP --no-links "$1" "$2" && ln -sf "$2" "$1" }
 
-
 relink1 () {
   #!/bin/sh
   set -e
