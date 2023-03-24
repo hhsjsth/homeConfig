@@ -93,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 ##############################
 #### EVAL
 # Set PATH, MANPATH, etc., for Homebrew.
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
 # eval "$(zoxide init --cmd cd zsh)"
 # eval "$(atuin init zsh)"
