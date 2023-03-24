@@ -220,12 +220,14 @@ export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 # export HOMEBREW_NO_AUTO_UPDATE=1
 
 # zsh completion
-if type brew &>/dev/null; then
-FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+# if type brew &>/dev/null; then
+# FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+# 
+# autoload -Uz compinit
+# compinit
+# fi
 
-autoload -Uz compinit
-compinit
-fi
+FPATH=/usr/share/zsh/site-functions/:$FPATH
 
 # Unversioned symlinks for python, python-config, pip etc. are installed here:
 # $(brew --prefix)/opt/python/libexec/bin
