@@ -227,7 +227,7 @@ export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 # compinit
 # fi
 
-FPATH=/usr/share/zsh/site-functions/:$FPATH
+FPATH=/usr/share/zsh/site-functions:$FPATH
 
 # Unversioned symlinks for python, python-config, pip etc. are installed here:
 # $(brew --prefix)/opt/python/libexec/bin
